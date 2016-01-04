@@ -2,7 +2,7 @@
   <body>
     <h1>Electron Tape</h1>
     <script>
-    var ipc = require('ipc')
+    var ipc = require('electron').ipcRenderer
     var testfile = ipc.sendSync('fetch-testfile')
     console.log('Electron Tape: Loading '+testfile)
     require(testfile)

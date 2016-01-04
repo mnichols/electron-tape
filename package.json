@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/pfraze/electron-tape#readme",
   "dependencies": {
-    "electron-prebuilt": "^0.28.2",
-    "tape": "~4.0.0"
+    "blue-tape": "^0.1.11"
   }
 }

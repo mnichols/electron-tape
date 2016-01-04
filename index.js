@@ -1,4 +1,4 @@
-var tape = require('tape')
+var tape = require('blue-tape')
 var path = require('path')
 
 module.exports = function (clientFile, cb) {
@@ -10,11 +10,11 @@ module.exports = function (clientFile, cb) {
   }
 
   // main thread
-  var ipc = require('ipc')
+  var ipc = require('electron').ipcMain
   var BrowserWindow = require('browser-window')
   require('app').on('ready', function () {
     var win = new BrowserWindow({ width: 1030, height: 720 })
-    win.loadUrl('file://' + path.join(__dirname, 'index.html'))
+    win.loadURL('file://' + path.join(__dirname, 'index.html'))
     win.openDevTools()
 
     // tell the client what to load
